@@ -10,3 +10,11 @@
 
 [build.processing.html]
   pretty_urls = true
+
+# Le README est la doc interne du dépôt, pas une page du site.
+# Netlify publiant la racine, il faut le masquer explicitement.
+[[redirects]]
+  from = "/README.md"
+  to = "/"
+  status = 301
+  force = true
