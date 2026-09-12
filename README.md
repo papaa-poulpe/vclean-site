@@ -27,7 +27,20 @@ git push
 ```
 
 `netlify.toml` décrit la publication : racine du dépôt, aucune compilation, et
-les liens `.html` servis sans extension (`galerie.html` devient `/galerie`).
+les liens `.html` servis sans extension (`galerie.html` devient `/galerie`). Il
+masque aussi `README.md`, que Netlify publierait sinon avec le reste.
+
+### Pourquoi le dépôt est public
+
+Le plan gratuit de Netlify refuse de construire les commits d'un contributeur
+qu'il ne reconnaît pas, mais uniquement sur les dépôts privés. Repasser
+`vclean-site` en privé rebloquerait donc les déploiements, avec ce message :
+
+> Build blocked: unrecognized Git contributor
+
+Il n'y a rien de confidentiel ici : ce dépôt ne contient que le site public.
+Si tu veux malgré tout le repasser en privé, il faudra d'abord connecter ton
+compte GitHub à Netlify (`Team settings` → `Members` → `Git contributors`).
 
 ## À ne pas confondre
 
