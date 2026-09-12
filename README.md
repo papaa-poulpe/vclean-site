@@ -16,9 +16,18 @@ suffit d'ouvrir `index.html` dans un navigateur.
 
 ## Publication
 
-Netlify publie la racine de ce dépôt. Les liens `.html` y sont servis sans
-extension (`galerie.html` devient `/galerie`) : c'est Netlify qui s'en charge,
-il n'y a rien à changer dans le code.
+Tout part de GitHub : `papaa-poulpe/vclean-site`. Netlify surveille la branche
+`main` et republie le site à chaque `git push`, en une minute environ. Il n'y a
+plus rien à déposer à la main.
+
+```bash
+git add -A
+git commit -m "Ce que j'ai changé"
+git push
+```
+
+`netlify.toml` décrit la publication : racine du dépôt, aucune compilation, et
+les liens `.html` servis sans extension (`galerie.html` devient `/galerie`).
 
 ## À ne pas confondre
 
