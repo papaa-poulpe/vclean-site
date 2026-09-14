@@ -18,3 +18,10 @@
   to = "/"
   status = 301
   force = true
+
+# Le script de mise à jour des avis tourne sur GitHub, pas sur le site.
+[[redirects]]
+  from = "/scripts/*"
+  to = "/"
+  status = 301
+  force = true
